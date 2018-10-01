@@ -49,10 +49,16 @@ public class XIPalettePopVC: UIViewController {
         self.removeAnimate()
     }
 
-    public func present(at vc: UIViewController) {
-        vc.present(self, animated: false) {[weak self] in
-            self?.showAnimate()
-        }
+    public func present(at parent: UIViewController) {
+        parent.addChildViewController(self)
+        self.didMove(toParentViewController: parent)
+        parent.view.addSubview(self.view)
+        self.view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.topAnchor.constraint(equalTo: parent.view.topAnchor).isActive = true
+        self.view.bottomAnchor.constraint(equalTo: parent.view.bottomAnchor).isActive = true
+        self.view.leftAnchor.constraint(equalTo: parent.view.leftAnchor).isActive = true
+        self.view.rightAnchor.constraint(equalTo: parent.view.rightAnchor).isActive = true
+        self.showAnimate()
     }
 }
 
@@ -71,8 +77,8 @@ extension XIPalettePopVC: ColorSliderProtocol {
 
 // MARK: Funcs
 extension XIPalettePopVC {
-    private func showAnimate()
-    {
+    private func showAnimate() {
+        
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0
         UIView.animate(withDuration: 0.25, animations: {
@@ -81,15 +87,16 @@ extension XIPalettePopVC {
         })
     }
 
-    @objc private func removeAnimate()
-    {
+    @objc private func removeAnimate() {
         UIView.animate(withDuration: 0.25, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.view.alpha = 0.0
         }, completion: {(finished : Bool) in
             if(finished)
             {
-                self.dismiss(animated: false, completion: nil)
+                self.willMove(toParentViewController: nil)
+                self.view.removeFromSuperview()
+                self.removeFromParentViewController()
             }
         })
     }
