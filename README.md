@@ -3,7 +3,7 @@ A swift implement Color picker
 ![](https://github.com/xxi511/XIPalette/blob/master/demo.png)
 ## Requirements
 * iOS 10.0 +
-* swift 4.0
+* swift 4.2
 
 ## install
 ### Manual
