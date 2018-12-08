@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol ColorWheelProtocol {
+public protocol ColorWheelProtocol: AnyObject {
     func colorPick(color: UIColor)
 }
 
@@ -46,7 +46,7 @@ public class ColorWheelView: UIView {
         }
     }
 
-    var delegate: ColorWheelProtocol?
+    weak var delegate: ColorWheelProtocol?
 
     public override init(frame: CGRect) {
         super.init(frame: frame)

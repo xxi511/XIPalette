@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol XIPaletteDelegate {
+public protocol XIPaletteDelegate: AnyObject {
     func select(color: UIColor)
 }
 
@@ -18,7 +18,7 @@ public class XIPalettePopVC: UIViewController {
     @IBOutlet private var checkBtn: UIButton!
     @IBOutlet private var closeBtn: UIButton!
     @IBOutlet private var background: UIView!
-    public var delegate: XIPaletteDelegate?
+    public weak var delegate: XIPaletteDelegate?
 
     public class func instance() -> XIPalettePopVC {
         let vc = XIPalettePopVC(nibName: "XIPalettePopVC", bundle: Bundle(for: XIPalettePopVC.self))
@@ -50,8 +50,8 @@ public class XIPalettePopVC: UIViewController {
     }
 
     public func present(at parent: UIViewController) {
-        parent.addChildViewController(self)
-        self.didMove(toParentViewController: parent)
+        parent.addChild(self)
+        self.didMove(toParent: parent)
         parent.view.addSubview(self.view)
         self.view.translatesAutoresizingMaskIntoConstraints = false
         self.view.topAnchor.constraint(equalTo: parent.view.topAnchor).isActive = true
@@ -94,9 +94,9 @@ extension XIPalettePopVC {
         }, completion: {(finished : Bool) in
             if(finished)
             {
-                self.willMove(toParentViewController: nil)
+                self.willMove(toParent: nil)
                 self.view.removeFromSuperview()
-                self.removeFromParentViewController()
+                self.removeFromParent()
             }
         })
     }

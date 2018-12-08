@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,11 +25,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZ1-Li-Zfz">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuE-UE-ka2">
-                    <rect key="frame" x="20" y="76.5" width="335" height="434"/>
+                    <rect key="frame" x="20" y="116.5" width="335" height="434"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPJ-Xu-Ced" customClass="ColorWheelView" customModule="XIPalette" customModuleProvider="target">
                             <rect key="frame" x="30" y="15" width="275" height="275"/>
@@ -85,7 +84,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I2-oQ-A82">
-                    <rect key="frame" x="340" y="61.5" width="30" height="30"/>
+                    <rect key="frame" x="340" y="101.5" width="30" height="30"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="TRj-dy-Nr6"/>
@@ -99,15 +98,15 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WuE-UE-ka2" secondAttribute="trailing" constant="20" id="6ao-fx-CbC"/>
+                <constraint firstItem="GZ1-Li-Zfz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FH8-1F-hoe"/>
                 <constraint firstItem="WuE-UE-ka2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="NAn-08-OlY"/>
-                <constraint firstItem="GZ1-Li-Zfz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Oxe-Q8-CAs"/>
                 <constraint firstItem="GZ1-Li-Zfz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xnf-rC-t8i"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GZ1-Li-Zfz" secondAttribute="bottom" id="Xrl-mq-2rb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GZ1-Li-Zfz" secondAttribute="trailing" id="Zki-Lw-Afo"/>
                 <constraint firstItem="0I2-oQ-A82" firstAttribute="trailing" secondItem="WuE-UE-ka2" secondAttribute="trailing" constant="15" id="cr1-SV-MbQ"/>
                 <constraint firstItem="WuE-UE-ka2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eiM-Q0-ovG"/>
                 <constraint firstItem="0I2-oQ-A82" firstAttribute="top" secondItem="WuE-UE-ka2" secondAttribute="top" constant="-15" id="p5g-Bx-yio"/>
-                <constraint firstItem="WuE-UE-ka2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-40" id="zOx-bG-18K"/>
+                <constraint firstItem="WuE-UE-ka2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zOx-bG-18K"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24.5" y="52.5"/>

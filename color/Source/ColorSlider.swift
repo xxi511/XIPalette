@@ -8,14 +8,14 @@
 
 import UIKit
 
-public protocol ColorSliderProtocol {
+public protocol ColorSliderProtocol: AnyObject {
     func colorSlider(bright: CGFloat)
 }
 
 @IBDesignable
 public class ColorSlider: UIView {
 
-    var delegate: ColorSliderProtocol?
+    weak var delegate: ColorSliderProtocol?
 
     private var colorVal: UIColor = UIColor.white
     @IBInspectable
