@@ -7,7 +7,7 @@ A swift implement Color picker
 
 ## install
 ### Manual
-copy everything in color/Source
+copy everything in Sources
 ### Carthage
 `github "xxi511/XIPalette"`
 
