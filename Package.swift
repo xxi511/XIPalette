@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "XIPalette",
-    platforms: [.iOS(.v8)],
+    platforms: [.iOS(.v10)],
     products: [
         .library(name: "XIPalette", targets: ["XIPalette"])
     ],
