@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1594C6D723F2810600552D4D /* XIPalettePopVC.xib in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* XIPalettePopVC.xib */; };
+		1594C72823F29A0B00552D4D /* XIPalettePopVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* XIPalettePopVC.xib */; };
 		OBJ_26 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ColorSlider.swift */; };
 		OBJ_27 /* ColorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ColorWheelView.swift */; };
 		OBJ_28 /* Pixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Pixel.swift */; };
@@ -102,6 +102,7 @@
 			buildPhases = (
 				OBJ_25 /* Sources */,
 				OBJ_30 /* Frameworks */,
+				1594C72723F299F700552D4D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -139,12 +140,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		1594C72723F299F700552D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1594C72823F29A0B00552D4D /* XIPalettePopVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				1594C6D723F2810600552D4D /* XIPalettePopVC.xib in Sources */,
 				OBJ_26 /* ColorSlider.swift in Sources */,
 				OBJ_27 /* ColorWheelView.swift in Sources */,
 				OBJ_28 /* Pixel.swift in Sources */,
